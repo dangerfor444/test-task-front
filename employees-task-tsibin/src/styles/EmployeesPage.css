@@ -1,0 +1,91 @@
+.EmployeesPage {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    height: 90px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    margin-left: 180px;
+  }
+
+  .logo img {
+    height: 41px; 
+    width: 101px;
+  }
+  
+  .header-info {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 64px; 
+  }
+  
+  .phone, .email {
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 26px;
+    margin-right: 180px;
+  }
+  
+  .theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #155DA4;
+    transition: .10s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .10s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #7e7c7c;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(28px);
+  }
+
+  h1 {
+      margin-left: 180px;
+  }

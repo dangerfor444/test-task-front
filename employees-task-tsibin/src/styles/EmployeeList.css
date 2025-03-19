@@ -1,0 +1,38 @@
+.employee-list {
+    margin: 0 auto;
+    padding: 0; 
+    width: calc(90% - 180px);
+  }
+  
+  .employee-header, .employee-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .employee-item span {
+    width: 25%; 
+    text-align: center; 
+  }
+
+  .header-item {
+    color: #B0B0B0;
+    font-size: 20px;
+    width: 25%; 
+    text-align: left; 
+  }
+
+  .employee-item {
+    border-bottom: 1px solid #D0D0D0; 
+}
+
+.employee-item:hover {
+    background-color: #f0f0f0; 
+}
+
+  .employee-item span {
+    display: flex; 
+    justify-content: start; 
+    font-size: 20px;
+    padding-bottom: 28px;
+    padding-top: 28px;
+  }
