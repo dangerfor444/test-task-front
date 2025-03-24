@@ -1,45 +1,33 @@
 import React from 'react';
+import { parse, format } from 'date-fns'; 
+import ru from 'date-fns/locale/ru'; 
 import '../styles/EmployeeList.css'; 
+import { useNavigate } from 'react-router-dom'; 
 
-const EmployeeList = () => {
-  const employees = [
-    {
-      id: 1,
-      name: 'Иванов Иван Иванович',
-      position: 'Разработчик',
-      phone: '+7 912 345 67 89',
-      birthDate: '1985-01-01',
-    },
-    {
-      id: 2,
-      name: 'Петрова Анна Сергеевна',
-      position: 'Дизайнер',
-      phone: '+7 912 123 45 67',
-      birthDate: '1990-05-12',
-    },
-    {
-      id: 3,
-      name: 'Сидоров Алексей Петрович',
-      position: 'Менеджер',
-      phone: '+7 912 987 65 43',
-      birthDate: '1988-11-30',
-    },
-  ];
+const EmployeeList = ({ employees, isDarkMode }) => {
+  const navigate = useNavigate();
+
+  const formatDate = (dateString) => format(parse(dateString, 'd MMMM yyyy', new Date(), { locale: ru }), 'dd.MM.yyyy');
+
+  const handleEmployeeClick = (employee) => navigate('/account-employee', { state: { employee } });
 
   return (
-    <div className="employee-list">
+    <div className={`employee-list ${isDarkMode ? 'dark' : ''}`}>
       <div className="employee-header">
-        <span className="header-item">ФИО</span>
-        <span className="header-item">Должность</span>
-        <span className="header-item">Телефон</span>
-        <span className="header-item">Дата рождения</span>
+        {['ФИО', 'Должность', 'Телефон', 'Дата рождения'].map((header, index) => (
+          <span key={index} className="header-item">{header}</span>
+        ))}
       </div>
       {employees.map((employee) => (
-        <div key={employee.id} className="employee-item">
+        <div 
+          key={employee.id} 
+          className={`employee-item ${isDarkMode ? 'dark' : ''}`} 
+          onClick={() => handleEmployeeClick(employee)}
+        >
           <span>{employee.name}</span>
           <span>{employee.position}</span>
           <span>{employee.phone}</span>
-          <span>{new Date(employee.birthDate).toLocaleDateString('ru-RU')}</span>
+          <span>{formatDate(employee.birthdate)}</span> 
         </div>
       ))}
     </div>

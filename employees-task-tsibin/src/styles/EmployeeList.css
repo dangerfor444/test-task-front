@@ -23,6 +23,7 @@
 
   .employee-item {
     border-bottom: 1px solid #D0D0D0; 
+    cursor: pointer;
 }
 
 .employee-item:hover {
@@ -36,3 +37,16 @@
     padding-bottom: 28px;
     padding-top: 28px;
   }
+
+
+  .employee-header.dark, .employee-item.dark {
+    color: #FFFFFF; 
+}
+
+.employee-item.dark {
+    background-color: #1A1A1A; 
+}
+
+.employee-item:hover.dark {
+    background-color: #3C3F42; 
+} 

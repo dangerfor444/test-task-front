@@ -20,8 +20,8 @@
   }
 
   .logo img {
-    height: 41px; 
-    width: 101px;
+    height: 81px; 
+    width: 181px;
   }
   
   .header-info {
@@ -61,7 +61,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #155DA4;
+    background-color: #858585;
     transition: .10s;
     border-radius: 30px;
   }
@@ -73,7 +73,7 @@
     width: 20px;
     left: 3px;
     bottom: 3px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transition: .10s;
     border-radius: 50%;
   }
@@ -89,3 +89,133 @@
   h1 {
       margin-left: 180px;
   }
+
+  .EmployeesPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-page {
+    flex: 1;
+  }
+  
+  .footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    max-width: 300px;
+    padding: 0 15px;
+  }
+  
+  .footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 5px 0;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .social-links a {
+    color: #155DA4;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+  
+  .dark {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+  }
+
+  .dark .footer-section {
+    background-color: #2A2A2A;
+    border: 1px solid #444;
+  }
+
+  .dark .footer-section h3 {
+    color: #FFFFFF;
+  }
+
+  .dark .footer-section p {
+    color: #B0B0B0;
+  }
+
+  .dark .social-links a {
+    color: #A0C4FF;
+  }
+
+  .dark .social-links a:hover {
+    color: #FFFFFF;
+  }
+
+  .dark .footer-bottom {
+    border-top: 1px solid #444;
+  }
+
+  .dark .footer-bottom p {
+    color: #B0B0B0;
+  }
+
+  .dark .header {
+    background-color: #2A2A2A;
+    border-bottom: 1px solid #444;
+  }
+
+  .dark .header-info {
+    color: #B0B0B0;
+  }
+
+  .dark .header-info .phone,
+  .dark .header-info .email {
+    color: #B0B0B0;
+  }
+
+  .dark .theme-switcher .slider {
+    background-color: #444;
+  }
+
+  .dark .theme-switcher input:checked + .slider {
+    background-color: #1976D2;
+  }
+
+
+
+
+
